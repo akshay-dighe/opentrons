@@ -48,6 +48,7 @@ function ProtocolEditorComponent(): JSX.Element {
             <MainPageModalPortalRoot />
             <LabwareUploadMessageModal />
             <ConnectedMainPanel />
+            
           </div>
         </div>
       </div>
