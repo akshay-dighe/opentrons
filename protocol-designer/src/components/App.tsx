@@ -1,12 +1,15 @@
 import * as React from 'react'
-import { ProtocolEditor } from './ProtocolEditor'
+import {
+  RouterProvider,
+} from "react-router-dom";
 
 import '../css/reset.css'
+import { router } from '../flex-components';
 
 export function App(): JSX.Element {
   return (
     <div className="container">
-      <ProtocolEditor />
+      <RouterProvider router={router} />
     </div>
   )
 }

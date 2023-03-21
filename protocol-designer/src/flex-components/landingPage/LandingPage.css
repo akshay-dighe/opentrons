@@ -1,0 +1,35 @@
+@import '@opentrons/components';
+
+.file_sidebar {
+  padding: 2rem 4.5rem 0;
+}
+
+.upload_button,
+.button {
+  margin: 0.75rem 0;
+  width: 100%;
+}
+
+.upload_button input {
+  position: fixed;
+  clip: rect(1px 1px 1px 1px);
+}
+
+.landing_page_main {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.landing_page_headline {
+  margin-top: 86px;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.ot_logo {
+  width: 160px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 58px;
+}
