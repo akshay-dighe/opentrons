@@ -1,6 +1,6 @@
 import React from "react";
 import cx from 'classnames'
-import { OutlineButton } from "@opentrons/components"
+import { OutlineButton, NewPrimaryBtn } from "@opentrons/components"
 import flexStyles from '../FlexComponents.css'
 import styles from './FlexForms.css'
 import { ProtocolNameAndDescriptionComponent } from "../ProtocolNameAndDescription";
@@ -9,7 +9,7 @@ import { PipettesChooseFirstComponent } from "../PipettesChooseFirst";
 export const FlexFormsComponent = () => {
     return <>
         <div className={cx(styles.main_container)}>
-            <div className={cx(styles.title_container)}>
+            <div className={cx(flexStyles.title_container)}>
                 <p className={cx(flexStyles.title19_700)}>
                     Create new Opentrons Flex protocol
                 </p>
@@ -23,8 +23,15 @@ export const FlexFormsComponent = () => {
                 </p>
             </div>
             <div className={cx(styles.flex_form_container)}>
-                <ProtocolNameAndDescriptionComponent />
-                {/* <PipettesChooseFirstComponent /> */}
+                <div className={cx(flexStyles.flex_component_container)}>
+                    {/* <ProtocolNameAndDescriptionComponent /> */}
+                    <PipettesChooseFirstComponent />
+                </div>
+                <div className={flexStyles.line_separator_div}>
+                </div>
+                <NewPrimaryBtn className={flexStyles.full_width}>
+                    Next
+                </NewPrimaryBtn>
             </div>
         </div>
     </>
