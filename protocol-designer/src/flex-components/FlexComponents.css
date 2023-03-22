@@ -81,7 +81,7 @@ body {
     width: 100%;
     border-radius: var(--bd-radius-default);
     padding-left: 0.25rem;
-    background-color: var(--c-bg-light);
+    /* background-color: var(--c-bg-light); */
     color: var(--c-font-dark);
     font-size: var(--fs-body-1);
     border-color: #8A8C8E;
@@ -133,4 +133,26 @@ body {
 
 .full_width {
     width: 100%;
+}
+
+.pnd_textarea {
+    width: 448px;
+    height: 89px;
+}
+
+.pnd_form {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.pnd_header {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 27px;
+}
+
+.pnd_error_message {
+    color: tomato;
+    font-size: 10px;
+    padding-bottom: 10px;
 }

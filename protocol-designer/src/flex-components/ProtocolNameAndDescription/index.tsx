@@ -2,78 +2,86 @@ import React from "react";
 import cx from 'classnames'
 import flexStyles from '../FlexComponents.css'
 import styles from './ProtocolNameAndDescription.css'
-import { PrimaryButton } from "@opentrons/components";
-import { PrimaryBtn } from "@opentrons/components";
-import { NewPrimaryBtn } from "@opentrons/components";
-import { NewAlertPrimaryBtn } from "@opentrons/components";
+import { Box, PrimaryButton, PrimaryBtn, NewPrimaryBtn, NewAlertPrimaryBtn, FormGroup, InputField } from "@opentrons/components";
+import { Formik } from "formik";
 
 export const ProtocolNameAndDescriptionComponent = () => {
-    return <>
-        <div className={cx(styles.flex_component_container)}>
-            <div>
-                <p className={cx(flexStyles.title16_700)}>
-                    Protocol Name and description
-                </p>
-            </div>
-            <div>
-                <p className={cx(flexStyles.text13_400)}>
-                    Choose a name for your protocol.*
-                </p>
-            </div>
-            <div>
-                <p className={cx(flexStyles.text10_400)}>
-                    Protocol Name
-                </p>
-            </div>
-            <div className={styles.input_box_wrapper}>
-                <input
-                    className={flexStyles.input_box}
-                    placeholder={''}
-                />
-            </div>
-            <div>
-                <p className={cx(flexStyles.i_text10_400)}>
-                    supporting text about any error handling goes here.
-                </p>
-            </div>
-            <div className={cx(flexStyles.margin_top27)}>
-                <p className={cx(flexStyles.text13_400)}>
-                    Add more information, if you like (you can change this later).
-                </p>
-            </div>
-            <div>
-                <p className={cx(flexStyles.text10_400)}>
-                    Organization/Author
-                </p>
-            </div>
-            <div className={styles.input_box_wrapper}>
-                <input
-                    className={flexStyles.input_box}
-                    placeholder={''}
-                />
-            </div>
-            <div>
-                <p className={cx(flexStyles.i_text10_400)}>
-                    supporting text about any error handling goes here.
-                </p>
-            </div>
-            <div className={cx(flexStyles.margin_top12)}>
-                <p className={cx(flexStyles.text10_400)}>
-                    Description
-                </p>
-            </div>
-            <div className={cx(styles.input_box_wrapper)}>
-                <textarea className={cx(flexStyles.input_textarea)} />
-            </div>
-            <div>
-                <p className={cx(flexStyles.i_text10_400)}>
-                    supporting text about any error handling goes here.
-                </p>
-            </div>
-        </div>
-        <div className={flexStyles.line_separator_div}></div>
-        <NewPrimaryBtn className={flexStyles.full_width}>
-            <p>Next</p>
-        </NewPrimaryBtn>
-    </>
+
+    const getInitialValues = {
+        fields: {
+            pndName: "test",
+            pndOrgAuthor: "test2",
+            pndDescription: "test3"
+        }
+    }
+    return <div>
+        <p className={flexStyles.pnd_header}>Protocol Name and description</p>
+        <p>Choose a name for your protocol.*</p>
+
+        <Formik
+            enableReinitialize
+            initialValues={getInitialValues}
+            validateOnChange={false}
+            onSubmit={(values, actions) => {
+                console.log({ values, actions })
+            }}
+        >
+            {
+                (props: any) => (
+                    <form onSubmit={props.handleSubmit}>
+                        <div>
+                            <div className={flexStyles.pnd_form}>
+                                <FormGroup label="Protocol Name">
+                                    <InputField
+                                        autoFocus
+                                        tabIndex={1}
+                                        onChange={props.handleChange}
+                                        onBlur={props.handleBlur}
+                                        value={props.values.fields.pndName}
+                                        name="fields.pndName"
+
+                                    />
+                                </FormGroup>
+                                <small className={flexStyles.pnd_error_message}>
+                                    supporting text about any error handling goes here.
+                                </small>
+
+                                <FormGroup label="Organization/Author">
+                                    <InputField
+                                        autoFocus
+                                        tabIndex={1}
+                                        onChange={props.handleChange}
+                                        onBlur={props.handleBlur}
+                                        value={props.values.fields.pndOrgAuthor}
+                                        name="fields.pndOrgAuthor"
+
+                                    />
+                                </FormGroup>
+                                <small className={flexStyles.pnd_error_message}>
+                                    supporting text about any error handling goes here.
+                                </small>
+
+                                <FormGroup label="Description">
+                                    <textarea
+                                        rows={4}
+                                        cols={50}
+                                        autoFocus
+                                        tabIndex={1}
+                                        onChange={props.handleChange}
+                                        onBlur={props.handleBlur}
+                                        value={props.values.fields.pndDescription}
+                                        name="fields.pndDescription"
+
+                                    />
+                                </FormGroup>
+                                <small className={flexStyles.pnd_error_message}>
+                                    supporting text about any error handling goes here.
+                                </small>
+                            </div>
+                            <NewPrimaryBtn className={flexStyles.full_width} type="submit">Next</NewPrimaryBtn>
+                        </div>
+                    </form>
+                )}
+        </Formik>
+    </div>
 }
