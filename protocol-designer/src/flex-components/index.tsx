@@ -6,16 +6,16 @@ import { FlexFormsComponent } from "./flexForms";
 import { LandingPageComponent } from "./landingPage";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <LandingPageComponent />,
-    },
-    {
-      path: "flex-robot",
-      element: <FlexFormsComponent />
-    },
-    {
-      path: "/ot-2-robot",
-      element: <ProtocolEditor />,
-    },
-  ]);
+  {
+    path: "/",
+    element: <LandingPageComponent />,
+  },
+  {
+    path: "flex-robot",
+    element: <FlexFormsComponent />
+  },
+  {
+    path: "/ot-2-robot",
+    element: <ProtocolEditor />,
+  },
+]);
