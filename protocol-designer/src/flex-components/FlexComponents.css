@@ -47,6 +47,23 @@ body {
     line-height: 16px;
 }
 
+.title_container {
+    margin-top: 86px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.heading_container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .title19_700 {
     font-size: 19px;
@@ -57,6 +74,18 @@ body {
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 12px;
+}
+
+.title14_700 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.text14_400 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
 }
 
 .text13_400 {
@@ -75,6 +104,14 @@ body {
     font-style: italic;
     font-size: 10px;
     font-weight: 400;
+}
+
+.flex_component_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 329px;
+    width: 100%;
 }
 
 .input_box {
@@ -126,7 +163,6 @@ body {
     position: relative;
     border-top: 1px solid var(--fundamentals-backgroundshade);
     height: 0.06rem;
-    /* border-top: 1px solid var(--darkblack-enabled); */
     margin-top: 25px;
     margin-bottom: 25px;
 }

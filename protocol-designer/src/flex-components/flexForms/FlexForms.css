@@ -6,16 +6,6 @@
     margin: auto;
 }
 
-.title_container {
-    margin-top: 86px;
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
 .cancel_button {
     color: #5181FF;
     border: 1px solid #5181FF;
