@@ -23,8 +23,7 @@ export const FlexFormsComponent = () => {
                 </p>
             </div>
             <div className={cx(styles.flex_form_container)}>
-                    <ProtocolNameAndDescriptionComponent />
-                    {/* <PipettesChooseFirstComponent /> */}
+                <ProtocolNameAndDescriptionComponent />
                 <div className={flexStyles.line_separator_div}>
                 </div>
             </div>

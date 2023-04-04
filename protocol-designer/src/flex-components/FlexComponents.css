@@ -1,9 +1,9 @@
 @import '@opentrons/components';
 
-body {
+/* body {
     font-family: var(--font-public-sans);
     line-height: 16px;
-}
+} */
 
 :root {
     /* fonts */
@@ -40,11 +40,6 @@ body {
     --color-gray: #8a8c8e;
     --darkblack-enabled: #16212d;
 
-}
-
-* {
-    font-family: var(--font-public-sans);
-    line-height: 16px;
 }
 
 .title_container {
